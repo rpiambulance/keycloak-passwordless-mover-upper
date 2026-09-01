@@ -1,0 +1,7 @@
+# Local run: cp .env.example .env, fill it in, then `docker compose up`.
+services:
+  mover:
+    build: .
+    image: ghcr.io/rpiambulance/keycloak-passwordless-mover-upper:latest
+    env_file: .env
+    restart: unless-stopped
